@@ -14,7 +14,7 @@
 		<ul class="navbar navbar-expand-lg navbar-dark nav justify-content-end" style="background-color: #5CA40D; color: #fff;">
 		  <div class="container-fluid">
 		    <a class="navbar-brand" href="#">
-		      <img src="asset/img/sehatpol-logo.png" alt="" width="80" height="24" class="d-inline-block align-text-top">
+		      <img src="asset/img/sehatpol-logo.png" alt="" width="100" height="28" class="d-inline-block align-text-top">
 		    </a>
 		  </div>
 		  <li class="nav-item">
@@ -41,7 +41,7 @@
 		</ul>
 	</nav>
 
-	<div class="main nav justify-content-center">
+	<div class="main nav justify-content-center" style="margin: 15px;">
 		<h1>Data Masukan</h1>
 		<table class="table table-success table-striped">
 		<tr>
