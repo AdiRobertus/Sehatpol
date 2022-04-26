@@ -41,7 +41,7 @@
 		</ul>
 	</nav>
 
-	<div class="main nav justify-content-center" style="margin: 15px;">
+	<div class="main nav justify-content-center" style="margin: 14px;">
 		<h1>Data Masukan</h1>
 		<table class="table table-success table-striped">
 		<tr>
