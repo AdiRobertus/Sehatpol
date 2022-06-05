@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Masukan || SehatPol</title>
+	<title>Article - SehatPol</title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="asset/css/masukan.css">
@@ -46,18 +46,51 @@
 		<table>
 			<tr>
 				<td>Nama Penulis</td>
+				<td>Tanggal Upload</td>
 			</tr>
 			<tr>
 				<td>
-					<select>Pilih</select>
+					<select name="nama">
+						<?php 
+						include "koneksi.php";
+						$perintah="select * from admin";
+						$query1=mysqli_query($conn, $perintah);
+						while ($data=mysqli_fetch_array($query1)) { ?>
+						<option value="pilih">
+							<?php
+							echo$data['Nama']; ?>
+						</option>
+						<?php } ?>
+					</select>
+				</td>		
+				<td>
+					<input type="date" name="tanggal">	
+				</td>			
+			</tr>	
+			<tr>
+				<td>Judul Artikel</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" name="judul">
 				</td>					
 			</tr>	
 			<tr>
-				<td>Link Video</td>
+				<td>Gambar</td>
 			</tr>
 			<tr>
-				<td><input type="text" name="Link"></td>					
-			</tr>	
+				<td>
+					<input type="file" accept="image/*" name="gambar">
+				</td>					
+			</tr>
+			<tr>
+				<td>isi Artikel</td>
+			</tr>
+			<tr>
+				<td>
+					<textarea name="isi"></textarea>
+				</td>					
+			</tr>
 			<tr>
 				<td><input type="submit" value="Submit"></td>					
 			</tr>				
@@ -80,9 +113,10 @@
     while($data = mysqli_fetch_array($result)) {         
         echo "<tr>";
         echo "<td>".$data['idA']."</td>";
-        echo "<td>".$data['Judul']."</td>";
-        echo "<td>".$data['Gambar']."</td>";    
-        echo "<td><a href='edit_artikel.php?idA=$data[idA]'>Edit</a> | <a href='hapus_artikel.php?idA=$data[idA]'>Delete</a></td></tr>";        
+        echo "<td>".$data['Gambar']."</td>";
+        echo "<td>".$data['Judul']."</td>"; 
+        echo "<td>".$data['Deskripsi']."</td>";    
+        echo "<td><a href='edit_artikel.php?idA=$data[idA]'>Edit</a> | <a href='hapus_artikel.php?idA=$data[idA]' onClick=\"return confirm('Are You Sure ?')\">Delete</a></td></tr>";        
     }
     ?>
 	</table>

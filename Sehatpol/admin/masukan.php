@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Masukan || SehatPol</title>
+	<title>Masukan - SehatPol</title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="asset/css/masukan.css">
@@ -42,12 +42,12 @@
 	</nav>
 
 	<div class="main nav justify-content-center" style="margin: 14px;">
-		<h1>Data Masukan</h1>
+		<h2>Data Masukan</h2>
 		<table class="table table-success table-striped">
 		<tr>
 			<th>No</th>
 			<th>Judul</th>
-			<th>Masukan</th>
+			<th>Email or Telephone</th>
 			<th>Aksi</th>
 		</tr>
 	<?php  
@@ -56,9 +56,9 @@
     while($data = mysqli_fetch_array($result)) {         
         echo "<tr>";
         echo "<td>".$data['idM']."</td>";
-        echo "<td>".$data['Judul']."</td>";
+        echo "<td>".$data['Email or Telephone']."</td>";
         echo "<td>".$data['Masukan']."</td>";    
-        echo "<td><a href='hapus_masukan.php?idM=$data[idM]'>Delete</a></td></tr>";        
+        echo "<td><a href='hapus_masukan.php?idM=$data[idM]' onClick=\"return confirm('Are You Sure ?')\">Delete</a></td></tr>";        
     }
     ?>
 	</table>

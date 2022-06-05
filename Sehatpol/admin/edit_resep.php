@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Masukan || SehatPol</title>
+	<title>Edit Recipe || SehatPol</title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="asset/css/masukan.css">
@@ -48,8 +48,8 @@
 	while($data = mysqli_fetch_array($query_mysql)){
 	?>
 
-	<h3>Edit Resep Makanan</h3>
-	<form action="submit_edit_resep.php" method="post">		
+	<h2 style="margin: 14px;">Edit Resep Makanan</h2>
+	<form action="submit_edit_resep.php" method="post" style="margin: 14px;">		
 		<table>
 			<tr>
 				<td>Judul Resep</td>

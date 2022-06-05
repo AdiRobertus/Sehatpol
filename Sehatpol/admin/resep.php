@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Masukan || SehatPol</title>
+	<title>Recipe - SehatPol</title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="asset/css/masukan.css">
@@ -18,22 +18,22 @@
 		    </a>
 		  </div>
 		  <li class="nav-item">
-		    <a class="nav-link" href="#" style="color: #fff;">Home</a>
+		    <a class="nav-link" href="index.php" style="color: #fff;">Home</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link" href="#" style="color: #fff;">HealtyFood</a>
+		    <a class="nav-link" href="healthyfood.php" style="color: #fff;">HealtyFood</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link" href="#" style="color: #fff;">Curahin</a>
+		    <a class="nav-link" href="curahin.php" style="color: #fff;">Curahin</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link" href="#" style="color: #fff;">Article</a>
+		    <a class="nav-link" href="artikel.php" style="color: #fff;">Article</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link" href="#" style="color: #fff;">Recipe</a>
+		    <a class="nav-link" href="resep" style="color: #fff;">Recipe</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link" href="#" style="color: #fff;">Masukan</a>
+		    <a class="nav-link" href="masukan.php" style="color: #fff;">Masukan</a>
 		  </li>
 		  <li class="nav-item">
 		    <a class="nav-link" href="#" style="color: #fff;">Logout</a>
@@ -41,8 +41,8 @@
 		</ul>
 	</nav>
 
-	<h3>Input Resep Makanan</h3>
-	<form action="submit_resep.php" method="post">		
+	<h2 style="margin: 14px;">Input Resep Makanan</h2>
+	<form action="submit_resep.php" method="post" style="margin: 14px;">		
 		<table>
 			<tr>
 				<td>Judul Resep</td>
@@ -55,9 +55,9 @@
 			</tr>
 			<tr>
 				<td><input type="text" name="Link"></td>					
-			</tr>	
+			</tr>
 			<tr>
-				<td><input type="submit" value="Submit"></td>					
+				<td style="margin-top: 100px;"><input type="submit" value="Submit"></td>					
 			</tr>				
 		</table>
 	</form>
@@ -79,7 +79,7 @@
         echo "<td>".$data['idR']."</td>";
         echo "<td>".$data['Judul']."</td>";
         echo "<td>".$data['Link']."</td>";    
-        echo "<td><a href='edit_resep.php?idR=$data[idR]'>Edit</a> | <a href='hapus_resep.php?idR=$data[idR]'>Delete</a></td></tr>";        
+        echo "<td><a href='edit_resep.php?idR=$data[idR]'>Edit</a> | <a href='hapus_resep.php?idR=$data[idR]' onClick=\"return confirm('Are You Sure ?')\">Delete</a></td></tr>";        
     }
     ?>
 	</table>
