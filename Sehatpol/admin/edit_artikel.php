@@ -9,37 +9,28 @@
 
 </head>
 <body>
-	<!-- button color FDAD30; table header color  -->
-	<nav>
-		<ul class="navbar navbar-expand-lg navbar-dark nav justify-content-end" style="background-color: #5CA40D; color: #fff;">
-		  <div class="container-fluid">
-		    <a class="navbar-brand" href="#">
-		      <img src="asset/img/sehatpol-logo.png" alt="" width="100" height="28" class="d-inline-block align-text-top">
-		    </a>
-		  </div>
-		  <li class="nav-item">
-		    <a class="nav-link" href="#" style="color: #fff;">Home</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="#" style="color: #fff;">HealtyFood</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="#" style="color: #fff;">Curahin</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="#" style="color: #fff;">Article</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="#" style="color: #fff;">Recipe</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="#" style="color: #fff;">Masukan</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="#" style="color: #fff;">Logout</a>
-		  </li>
-		</ul>
-	</nav>
+    <header>
+        <nav>
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="index.php">
+                        <img src="asset/img/sehatpol-logo.png" style="width: 210px; height: 60px;">
+                    </a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Healthy Food</a></li>
+                        <li><a href="">Curahin</a></li>
+                        <li><a href="artikel.php">Article</a></li>
+                        <li><a href="resep.php">Recipe</a></li>
+                        <li><a href="masukan.php">Masukan</a></li>
+                        <li><a href="">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>    
+    </header>
 
 	<?php 
 	include "koneksi.php";
