@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Masukan || SehatPol</title>
+	<title>Article - SehatPol</title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="asset/css/masukan.css">
+	<link rel="stylesheet" type="text/css" href="asset/css/main.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 </head>
@@ -49,7 +49,7 @@
 			<tr>
 				<input type="hidden" name="idA" value="<?php echo $data['idA'] ?>">
 				<td>
-					<select name="nama">
+					<select name="nama" class="form-select">
 						<?php 
 						include "koneksi.php";
 						$perintah="select * from admin";
@@ -63,23 +63,31 @@
 					</select>
 				</td>		
 				<td>
-					<input type="date" name="tanggal" value="<?php echo $data['Tgl'] ?>">	
+					<input type="date" name="tanggal" value="<?php echo $data['Tgl'] ?>" class="form-control">	
 				</td>			
 			</tr>	
 			<tr>
 				<td>Judul Artikel</td>
+				<td>Kategori</td>
 			</tr>
 			<tr>
 				<td>
-					<input type="text" name="judul" value="<?php echo $data['Judul'] ?>">
-				</td>					
+					<input type="text" name="judul" value="<?php echo $data['Judul'] ?>" class="form-control">
+				</td>			
+				<td>
+					<select name="Kategori" value="<?php echo $data['Kategori'] ?>" class="form-select">
+						<option>Tips and Tricks</option>
+						<option>Lifestyle</option>
+						<option>Sports</option>
+					</select>
+				</td>		
 			</tr>	
 			<tr>
 				<td>Gambar</td>
 			</tr>
 			<tr>
 				<td>
-					<input type="file" accept="image/*" name="gambar" value="<?php echo $data['Gambar'] ?>">
+					<input type="file" accept="image/*" name="gambar" value="<?php echo $data['Gambar'] ?>" class="form-control-file">
 				</td>					
 			</tr>
 			<tr>
@@ -87,11 +95,11 @@
 			</tr>
 			<tr>
 				<td>
-					<textarea name="isi"></textarea>
+					<textarea name="isi" value="<?php echo $data['Deskripsi'] ?>"></textarea>
 				</td>					
 			</tr>
 			<tr>
-				<td><input type="submit" value="Submit"></td>					
+				<td><input class="btn btn-primary" type="submit" value="Submit" style="background-color: #FDAD30; border-color: #FDAD30;"></td>					
 			</tr>				
 		</table>
 	</form>

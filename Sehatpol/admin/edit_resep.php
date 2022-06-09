@@ -47,20 +47,20 @@
 			</tr>
 			<tr>
 				<input type="hidden" name="idR" value="<?php echo $data['idR'] ?>">
-				<td><input type="text" name="Judul" value="<?php echo $data['Judul'] ?>"></td>					
+				<td><input type="text" name="Judul" value="<?php echo $data['Judul'] ?>" class="form-control"></td>					
 			</tr>	
 			<tr>
 				<td>Link Video</td>
 			</tr>
 			<tr>
-				<td><input type="text" name="Link" value="<?php echo $data['Link'] ?>"></td>					
+				<td><input type="text" name="Link" value="<?php echo $data['Link'] ?>" class="form-control"></td>					
 			</tr>	
 			<tr>
 				<td>Kategori</td>
 			</tr>
 			<tr>
 				<td>
-					<select name="Kategori" value="<?php echo $data['Link'] ?>">
+					<select name="Kategori" value="<?php echo $data['Link'] ?>" class="form-select">
 						<option>Camilan</option>
 						<option>Makanan Utama</option>
 						<option>Anak</option>
@@ -68,7 +68,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><input type="submit" value="Submit"></td>					
+				<td><input class="btn btn-primary" type="submit" value="Submit" style="background-color: #FDAD30; border-color: #FDAD30;"></td>					
 			</tr>				
 		</table>
 	</form>

@@ -39,20 +39,20 @@
 				<td>Judul Resep</td>
 			</tr>
 			<tr>
-				<td><input type="text" name="Judul"></td>					
+				<td><input type="text" name="Judul" class="form-control"></td>					
 			</tr>	
 			<tr>
 				<td>Link Video</td>
 			</tr>
 			<tr>
-				<td><input type="text" name="Link"></td>					
+				<td><input type="text" name="Link" class="form-control"></td>					
 			</tr>		
 			<tr>
 				<td>Kategori</td>
 			</tr>
 			<tr>
 				<td>
-					<select name="Kategori">
+					<select name="Kategori" class="form-select">
 						<option>Camilan</option>
 						<option>Makanan Utama</option>
 						<option>Anak</option>
@@ -60,7 +60,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td style="margin-top: 100px;"><input type="submit" value="Submit"></td>					
+				<td><input class="btn btn-primary" type="submit" value="Submit" style="background-color: #FDAD30; border-color: #FDAD30;"></td>					
 			</tr>		
 		</table>
 	</form>

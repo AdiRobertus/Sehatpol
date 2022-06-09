@@ -41,7 +41,7 @@
 			</tr>
 			<tr>
 				<td>
-					<select name="nama">
+					<select name="nama" class="form-select">
 						<?php 
 						include "koneksi.php";
 						$perintah="select * from admin";
@@ -55,23 +55,31 @@
 					</select>
 				</td>		
 				<td>
-					<input type="date" name="tanggal">	
+					<input type="date" name="tanggal" class="form-control">	
 				</td>			
 			</tr>	
 			<tr>
 				<td>Judul Artikel</td>
+				<td>Kategori</td>
 			</tr>
 			<tr>
 				<td>
-					<input type="text" name="judul">
+					<input type="text" name="judul" class="form-control">
 				</td>					
+				<td>
+					<select name="Kategori" class="form-select">
+						<option>Tips and Tricks</option>
+						<option>Lifestyle</option>
+						<option>Sports</option>
+					</select>
+				</td>
 			</tr>	
 			<tr>
 				<td>Gambar</td>
 			</tr>
 			<tr>
 				<td>
-					<input type="file" accept="image/*" name="gambar">
+					<input type="file" accept="image/*" name="gambar"class="form-control-file">
 				</td>					
 			</tr>
 			<tr>
@@ -79,11 +87,11 @@
 			</tr>
 			<tr>
 				<td>
-					<textarea name="isi"></textarea>
+					<textarea class="form-control" name="isi"></textarea>
 				</td>					
 			</tr>
 			<tr>
-				<td><input type="submit" value="Submit"></td>					
+				<td><input class="btn btn-primary" type="submit" value="Submit" style="background-color: #FDAD30; border-color: #FDAD30;"></td>					
 			</tr>				
 		</table>
 	</form>
@@ -95,6 +103,7 @@
 			<th>No</th>
 			<th>Gambar</th>
 			<th>Judul Artikel</th>
+			<th>Kategori</th>
 			<th>Isi Artikel</th>
 			<th>Aksi</th>
 		</tr>
@@ -105,7 +114,8 @@
         echo "<tr>";
         echo "<td>".$data['idA']."</td>";
         echo "<td>".$data['Gambar']."</td>";
-        echo "<td>".$data['Judul']."</td>"; 
+        echo "<td>".$data['Judul']."</td>";
+        echo "<td>".$data['Kategori']."</td>"; 
         echo "<td>".$data['Deskripsi']."</td>";    
         echo "<td><a href='edit_artikel.php?idA=$data[idA]'>Edit</a> | <a href='hapus_artikel.php?idA=$data[idA]' onClick=\"return confirm('Are You Sure ?')\">Delete</a></td></tr>";        
     }
